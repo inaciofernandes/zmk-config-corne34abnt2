@@ -128,7 +128,6 @@
       key-positions   = <18 39>;
       bindings        = <&to SYMB>;
     };
-  };
 
     // Fixar camada default (BASE)
     combo_lock_base {
