@@ -118,7 +118,7 @@
       //  Apertar a tecla "G" (17) + "SPACE" (38) fixa NUMB
       timeout-ms      = <60>;
       key-positions   = <17 38>;
-      bindings        = <&to NUMB>
+      bindings        = <&to NUMB>;
     };
 
     // Fixar camada de símbolos (SYMB)
