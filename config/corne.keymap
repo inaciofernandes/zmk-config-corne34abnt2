@@ -68,8 +68,8 @@
       bindings        = <&kp ENTER>;
     };
     combo_enter_right {
-      //  Apertar as letras "M" (30) + "," (31) juntos ativa a tecla ENTER
-      key-positions   = <30 31>;      //  Posição física das teclas M e ,
+      //  Apertar as letras "M" (31) + "," (32) juntos ativa a tecla ENTER
+      key-positions   = <31 32>;      //  Posição física das teclas M e ,
       bindings        = <&kp ENTER>;
     };
 
@@ -127,6 +127,14 @@
       timeout-ms      = <60>;
       key-positions   = <18 39>;
       bindings        = <&to SYMB>;
+    };
+
+    // Fixar camada de funções (FUNC)
+    combo_lock_func {
+      //  Apertar a tecla "H" (18) + "BSPC" (40) fixa FUNC
+      timeout-ms      = <60>;
+      key-positions   = <18 40>;
+      bindings        = <&to FUNC>;
     };
 
     // Fixar camada default (BASE)
