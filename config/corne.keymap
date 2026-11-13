@@ -51,13 +51,13 @@
 
     //  Combos tecla ESC:
     combo_esc_left {
-      //  Apertar as letras "Q" (1) + "W" (2) juntos ativa a tecla ESC
-      key-positions   = <1 2>;      //  Posição física das teclas Q e W
+      //  Apertar as letras "W" (2) + "E" (3) juntos ativa a tecla ESC
+      key-positions   = <2 3>;      //  Posição física das teclas W e E
       bindings        = <&kp ESC>;
     };
     combo_esc_right {
-      //  Apertar as letras "O" (9) + "P" (10) juntos ativa a tecla ESC
-      key-positions   = <9 10>;      //  Posição física das teclas O e P
+      //  Apertar as letras "I" (8) + "O" (9) juntos ativa a tecla ESC
+      key-positions   = <8 9>;      //  Posição física das teclas I e Ox
       bindings        = <&kp ESC>;
     };
 
@@ -73,36 +73,36 @@
       bindings        = <&kp ENTER>;
     };
 
-    //  Camada do mouse:
-    combo_mouse {
-      //  Apertar a letra "B" (29) + "TAB" (37) juntos abre a camada MOUS
-      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
-      key-positions   = <29 37>;      //  Posição física das teclas B e TAB
-      bindings        = <&mo MOUS>;   //  Ativa temporariamente a camada Mouse
-    };
+//    //  Camada do mouse:
+//    combo_mouse {
+//      //  Apertar a letra "B" (29) + "TAB" (37) juntos abre a camada MOUS
+//      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
+//      key-positions   = <29 37>;      //  Posição física das teclas B e TAB
+//      bindings        = <&mo MOUS>;   //  Ativa temporariamente a camada Mouse
+//    };
 
-    //  Camada de bluetooth:
-    combo_bluetooth {
-      //  Apertar a letra "N" (30) + "BSPC" (40) juntos abre a Camada BLTH
-      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
-      key-positions   = <30 40>;      //  Posição física das teclas N e BSPC
-      bindings        = <&mo BLTH>;   //  Ativa temporariamente a camada Bluetooth
-    };
+//    //  Camada de bluetooth:
+//    combo_bluetooth {
+//      //  Apertar a letra "N" (30) + "BSPC" (40) juntos abre a Camada BLTH
+//      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
+//      key-positions   = <30 40>;      //  Posição física das teclas N e BSPC
+//      bindings        = <&mo BLTH>;   //  Ativa temporariamente a camada Bluetooth
+//    };
 
-    //  Camada de mídia:
-    combo_media {
-      //  Apertar a letra "V" (28) + "TAB" (37) juntos abre a Camada MDIA
-      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
-      key-positions   = <28 37>;      //  Posição física das teclas V e TAB
-      bindings        = <&mo MDIA>;   //  Ativa temporariamente a camada MEDIA
-    };
+//    //  Camada de mídia:
+//    combo_media {
+//      //  Apertar a letra "V" (28) + "TAB" (37) juntos abre a Camada MDIA
+//      timeout-ms      = <50>;         //  Janela de tempo para o aperto simultâneo
+//      key-positions   = <28 37>;      //  Posição física das teclas V e TAB
+//      bindings        = <&mo MDIA>;   //  Ativa temporariamente a camada MEDIA
+//    };
 
     // Fixar camada de acentos (ACCN)
     combo_lock_accents {
-      //  Apertar as letras "G" (17) + "H" (18) fixa ACCN
-      timeout-ms      = <60>;
-      key-positions   = <17 18>;
-      bindings        = <&to ACCN>;
+    //  Apertar as letras "Z" (25) + ";" (34) fixa ACCN
+      timeout-ms      = <60>;           //  Janela de tempo para o aperto simultâneo
+      key-positions   = <25 34>;        //  Posição física das teclas Z e ;
+      bindings        = <&to ACCN>;     //  Fixa a camada ACCN
     };
 
     // Fixar camada de navegação (NAVI)
@@ -312,29 +312,15 @@
 //                                              &to BASE        &kp TAB         &kp SPACE         &kp SPACE       &bs_del         &kp RET
 //        //                                  ╰───────────────┴───────────────┴───────────────╯ ╰───────────────┴───────────────┴───────────────╯
 //      >;
-//      display-name  = "BASE";
-//      label         = "Default";
-//      bindings      = <
-//        //  ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-//        &none &kp PT_Q        &kp PT_W        &kp PT_E        &kp PT_R        &kp PT_T          &kp PT_Y        &kp PT_U        &kp PT_I        &kp PT_O        &kp PT_P      &none
-//        //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-//        &none &hm LGUI PT_A   &hm LALT PT_S   &hm LCTRL PT_D  &hm LSHFT PT_F  &kp PT_G          &kp PT_H        &hm RSHFT PT_J  &hm LCTRL PT_K  &hm RALT PT_L   &hm RGUI PT_C_CEDILLA &none
-//        //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-//        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI      &none
-//        //  ╰───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯
-//        &none                                                 &lt NAVI TAB    &lt NUMB SPACE    &lt SYMB SPACE  &lt_bspc FUNC 0                                               &none
-//        //                                                  ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
-//      >;
-//    };
       display-name  = "BASE";
       label         = "Default";
       bindings      = <
         //  ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
         &none &kp PT_Q        &kp PT_W        &kp PT_E        &kp PT_R        &kp PT_T          &kp PT_Y        &kp PT_U        &kp PT_I        &kp PT_O        &kp PT_P      &none
         //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        &none &hm LSHFT PT_A  &hm LCTRL PT_S  &hm LGUI PT_D   &hm LALT PT_F   &kp PT_G          &kp PT_H        &hm RALT PT_J   &hm RGUI PT_K   &hm LCTRL PT_L  &hm RSHFT PT_C_CEDILLA  &none
+        &none &hm LGUI PT_A   &hm LALT PT_S   &hm LCTRL PT_D  &hm LSHFT PT_F  &kp PT_G          &kp PT_H        &hm RSHFT PT_J  &hm LCTRL PT_K  &hm RALT PT_L   &hm RGUI PT_C_CEDILLA &none
         //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI        &none
+        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI      &none
         //  ╰───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯
         &none                                                 &lt NAVI TAB    &lt NUMB SPACE    &lt SYMB SPACE  &lt_bspc FUNC 0                                               &none
         //                                                  ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
