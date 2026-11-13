@@ -51,25 +51,25 @@
 
     //  Combos tecla ESC:
     combo_esc_left {
-      //  Apertar as letras "E" (3) + "T" (4) juntos ativa a tecla ESC
-      key-positions   = <3 4>;      //  Posição física das teclas E e T
+      //  Apertar as letras "Q" (1) + "W" (2) juntos ativa a tecla ESC
+      key-positions   = <1 2>;      //  Posição física das teclas Q e W
       bindings        = <&kp ESC>;
     };
     combo_esc_right {
-      //  Apertar as letras "U" (7) + "I" (8) juntos ativa a tecla ESC
-      key-positions   = <7 8>;      //  Posição física das teclas U e I
+      //  Apertar as letras "O" (9) + "P" (10) juntos ativa a tecla ESC
+      key-positions   = <9 10>;      //  Posição física das teclas O e P
       bindings        = <&kp ESC>;
     };
 
     //  Combos tecla ENTER:
     combo_enter_left {
-      //  Apertar as letras "C" (27) + "V" (28) juntos ativa a tecla ENTER
-      key-positions   = <27 28>;      //  Posição física das teclas C e V
+      //  Apertar as letras "E" (3) + "R" (4) juntos ativa a tecla ENTER
+      key-positions   = <3 4>;      //  Posição física das teclas E e R
       bindings        = <&kp ENTER>;
     };
     combo_enter_right {
-      //  Apertar as letras "M" (31) + "," (32) juntos ativa a tecla ENTER
-      key-positions   = <31 32>;      //  Posição física das teclas M e ,
+      //  Apertar as letras "U" (7) + "I" (8) juntos ativa a tecla ENTER
+      key-positions   = <7 8>;      //  Posição física das teclas U e I
       bindings        = <&kp ENTER>;
     };
 
@@ -312,15 +312,29 @@
 //                                              &to BASE        &kp TAB         &kp SPACE         &kp SPACE       &bs_del         &kp RET
 //        //                                  ╰───────────────┴───────────────┴───────────────╯ ╰───────────────┴───────────────┴───────────────╯
 //      >;
+//      display-name  = "BASE";
+//      label         = "Default";
+//      bindings      = <
+//        //  ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+//        &none &kp PT_Q        &kp PT_W        &kp PT_E        &kp PT_R        &kp PT_T          &kp PT_Y        &kp PT_U        &kp PT_I        &kp PT_O        &kp PT_P      &none
+//        //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+//        &none &hm LGUI PT_A   &hm LALT PT_S   &hm LCTRL PT_D  &hm LSHFT PT_F  &kp PT_G          &kp PT_H        &hm RSHFT PT_J  &hm LCTRL PT_K  &hm RALT PT_L   &hm RGUI PT_C_CEDILLA &none
+//        //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+//        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI      &none
+//        //  ╰───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯
+//        &none                                                 &lt NAVI TAB    &lt NUMB SPACE    &lt SYMB SPACE  &lt_bspc FUNC 0                                               &none
+//        //                                                  ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
+//      >;
+//    };
       display-name  = "BASE";
       label         = "Default";
       bindings      = <
         //  ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮ ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
         &none &kp PT_Q        &kp PT_W        &kp PT_E        &kp PT_R        &kp PT_T          &kp PT_Y        &kp PT_U        &kp PT_I        &kp PT_O        &kp PT_P      &none
         //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        &none &hm LGUI PT_A   &hm LALT PT_S   &hm LCTRL PT_D  &hm LSHFT PT_F  &kp PT_G          &kp PT_H        &hm RSHFT PT_J  &hm LCTRL PT_K  &hm RALT PT_L   &hm RGUI PT_C_CEDILLA &none
+        &none &hm LSHFT PT_A  &hm LCTRL PT_S  &hm LGUI PT_D   &hm LALT PT_F   &kp PT_G          &kp PT_H        &hm RALT PT_J   &hm RGUI PT_K   &hm LCTRL PT_L  &hm RSHFT PT_C_CEDILLA  &none
         //  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI      &none
+        &none &lt ACCN PT_Z   &kp PT_X        &kp PT_C        &kp PT_V        &kp PT_B          &kp PT_N        &kp PT_M        &kp PT_COMMA    &kp PT_DOT      &lt ACCN PT_SEMI        &none
         //  ╰───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤ ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────╯
         &none                                                 &lt NAVI TAB    &lt NUMB SPACE    &lt SYMB SPACE  &lt_bspc FUNC 0                                               &none
         //                                                  ╰───────────────┴───────────────╯ ╰───────────────┴───────────────╯
